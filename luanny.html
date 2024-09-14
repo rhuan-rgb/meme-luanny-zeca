@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>omae wa mo shindeiru</title>
+    <style>
+        body {
+            margin: 0; /* Remove a margem padrão do body */
+            height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            background-image: url(luanny.jfif);
+            background-repeat: repeat;
+            background-size: 9%;
+        }
+
+        img {
+            max-width: 450px; /* Ajuste o tamanho máximo da imagem conforme necessário */
+            height: auto; /* Mantém a proporção da imagem */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="luanny.jfif" alt="Clique para uma surpresa" id="imagem">
+
+    <!-- Elemento de áudio -->
+    <audio id="audio" src="sound_effect.m4a"></audio>
+
+    <script>
+        // Seleciona a imagem e o elemento de áudio
+        var imagem = document.getElementById('imagem');
+        var audio = document.getElementById('audio');
+
+        // Adiciona um evento de clique à imagem
+        imagem.addEventListener('click', function() {
+            // Reproduz o áudio quando a imagem é clicada
+            audio.play();
+        });
+    </script>
+</body>
+
+</html>
